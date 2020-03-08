@@ -5,7 +5,7 @@ var T = new Twit({
   access_token:         '1226559082812723200-DnI3kxqEYgZ7zTR9tvRe28b8wWB4nW',
   access_token_secret:  'grfUgJsM3lyBC2H9fPqwMSv5au2tIRrwy7K3A9lutaYpm',
 })
-var stream = T.stream('statuses/filter', {track: ['#SG_FIL']})
+var stream = T.stream('statuses/filter', {track: ['#SG_FIL']});
 
 stream.on('tweet', function(tweet){
   console.log(tweet);
