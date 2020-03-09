@@ -1,4 +1,5 @@
 var Twit = require('twit')
+require('dotenv').config
 const result = dotenv.config()
 if (result.error) {
   throw result.error
