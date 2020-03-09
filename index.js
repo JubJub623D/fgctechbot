@@ -1,6 +1,7 @@
 var Twit = require('twit')
 require('dotenv').config
 
+console.log('test0');
 
 var T = new Twit({
   consumer_key: process.env.CONSUMER_KEY,
@@ -8,7 +9,12 @@ var T = new Twit({
     access_token: process.env.ACCESS_TOKEN,
     access_token_secret: process.env.ACCESS_TOKEN_SECRET
 })
+
+console.log('test1');
+
 var stream = T.stream('statuses/filter', {track: ['#SG_FIL']})
+
+console.log('test2');
 
 stream.on('tweet', function(tweet){
   console.log(tweet);
